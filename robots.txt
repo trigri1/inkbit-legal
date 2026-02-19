@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://trigri1.github.io/inkbit-legal/sitemap.xml

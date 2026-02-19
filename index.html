@@ -8,15 +8,24 @@
       name="description"
       content="InkBit helps you build a calm daily reading and reflection ritual with favorites, brief reflections, journal history, and private local-first controls."
     />
-    <link rel="canonical" href="SITE_URL" />
+    <meta name="robots" content="index,follow,max-image-preview:large" />
+    <meta name="theme-color" content="#f7f6f3" />
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/branding/favicon-32.png" />
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/branding/apple-touch-icon.png" />
+    <link rel="canonical" href="https://trigri1.github.io/inkbit-legal/" />
 
     <meta property="og:title" content="InkBit — A calm daily reading and reflection ritual" />
     <meta
       property="og:description"
       content="Build a calm daily reading and reflection ritual. Save favorites, write brief reflections, and keep your journal history close."
     />
-    <meta property="og:url" content="SITE_URL" />
+    <meta property="og:url" content="https://trigri1.github.io/inkbit-legal/" />
     <meta property="og:type" content="website" />
+    <meta
+      property="og:image"
+      content="https://trigri1.github.io/inkbit-legal/assets/branding/inkbit_app_icon_1024.png"
+    />
+    <meta property="og:image:alt" content="InkBit app icon" />
 
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content="InkBit — A calm daily reading and reflection ritual" />
@@ -24,7 +33,23 @@
       name="twitter:description"
       content="A calm daily reading and reflection ritual with local-first privacy controls."
     />
-    <meta name="twitter:image" content="SITE_URL/og-image.jpg" />
+    <meta
+      name="twitter:image"
+      content="https://trigri1.github.io/inkbit-legal/assets/branding/inkbit_app_icon_1024.png"
+    />
+
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "SoftwareApplication",
+        "name": "InkBit",
+        "applicationCategory": "LifestyleApplication",
+        "operatingSystem": "Android",
+        "url": "https://trigri1.github.io/inkbit-legal/",
+        "downloadUrl": "https://play.google.com/store/apps/details?id=com.trigri.inkbit",
+        "description": "InkBit is a calm daily reading and reflection ritual with favorites, brief journaling, history, and local-first privacy controls."
+      }
+    </script>
 
     <style>
       :root {
@@ -144,16 +169,42 @@
       }
 
       .shot-media {
+        position: relative;
         overflow: hidden;
         border-radius: 12px;
         border: 1px solid #d9d1c8;
         background: #ede8e2;
+        aspect-ratio: 1280 / 2856;
       }
 
       .shot-image {
         display: block;
         width: 100%;
-        height: auto;
+        height: 100%;
+        object-fit: cover;
+        position: relative;
+        z-index: 1;
+      }
+
+      .shot-placeholder {
+        position: absolute;
+        inset: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        font-size: 0.9rem;
+        color: #6d6258;
+        background: #ede8e2;
+        padding: 0.75rem;
+      }
+
+      .shot-media.is-loaded .shot-placeholder {
+        display: none;
+      }
+
+      .shot-media.is-missing .shot-image {
+        display: none;
       }
 
       .shot figcaption {
@@ -224,6 +275,7 @@
           <div class="shots">
             <figure class="shot">
               <div class="shot-media">
+                <div class="shot-placeholder">Screenshot unavailable</div>
                 <img
                   class="shot-image"
                   src="assets/screens/01_today.png"
@@ -232,12 +284,15 @@
                   height="2856"
                   loading="lazy"
                   decoding="async"
+                  onload="this.closest('.shot-media').classList.add('is-loaded')"
+                  onerror="this.closest('.shot-media').classList.add('is-missing')"
                 />
               </div>
               <figcaption>Today: read, reflect, and save a favorite in one calm flow.</figcaption>
             </figure>
             <figure class="shot">
               <div class="shot-media">
+                <div class="shot-placeholder">Screenshot unavailable</div>
                 <img
                   class="shot-image"
                   src="assets/screens/02_reader.png"
@@ -246,12 +301,15 @@
                   height="2856"
                   loading="lazy"
                   decoding="async"
+                  onload="this.closest('.shot-media').classList.add('is-loaded')"
+                  onerror="this.closest('.shot-media').classList.add('is-missing')"
                 />
               </div>
               <figcaption>Full reading mode for deeper focus and fewer distractions.</figcaption>
             </figure>
             <figure class="shot">
               <div class="shot-media">
+                <div class="shot-placeholder">Screenshot unavailable</div>
                 <img
                   class="shot-image"
                   src="assets/screens/03_journal.png"
@@ -260,12 +318,15 @@
                   height="2856"
                   loading="lazy"
                   decoding="async"
+                  onload="this.closest('.shot-media').classList.add('is-loaded')"
+                  onerror="this.closest('.shot-media').classList.add('is-missing')"
                 />
               </div>
               <figcaption>Journal timeline with grouped entries and quick scanning.</figcaption>
             </figure>
             <figure class="shot">
               <div class="shot-media">
+                <div class="shot-placeholder">Screenshot unavailable</div>
                 <img
                   class="shot-image"
                   src="assets/screens/04_journal_editor.png"
@@ -274,12 +335,15 @@
                   height="2856"
                   loading="lazy"
                   decoding="async"
+                  onload="this.closest('.shot-media').classList.add('is-loaded')"
+                  onerror="this.closest('.shot-media').classList.add('is-missing')"
                 />
               </div>
               <figcaption>Quick journal editor for short, consistent reflections.</figcaption>
             </figure>
             <figure class="shot">
               <div class="shot-media">
+                <div class="shot-placeholder">Screenshot unavailable</div>
                 <img
                   class="shot-image"
                   src="assets/screens/05_library_history.png"
@@ -288,12 +352,15 @@
                   height="2856"
                   loading="lazy"
                   decoding="async"
+                  onload="this.closest('.shot-media').classList.add('is-loaded')"
+                  onerror="this.closest('.shot-media').classList.add('is-missing')"
                 />
               </div>
               <figcaption>Library history to revisit past readings and favorites.</figcaption>
             </figure>
             <figure class="shot">
               <div class="shot-media">
+                <div class="shot-placeholder">Screenshot unavailable</div>
                 <img
                   class="shot-image"
                   src="assets/screens/06_settings.png"
@@ -302,6 +369,8 @@
                   height="2856"
                   loading="lazy"
                   decoding="async"
+                  onload="this.closest('.shot-media').classList.add('is-loaded')"
+                  onerror="this.closest('.shot-media').classList.add('is-missing')"
                 />
               </div>
               <figcaption>Settings for appearance, reminders, and security preferences.</figcaption>
