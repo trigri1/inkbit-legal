@@ -34,4 +34,4 @@ InkBit works without accounts. You can use the app without sharing your name, em
 - You can remove local app data by clearing app storage or uninstalling the app.
 
 ## 8. Contact
-- Email: trigri1@gmail.com
+- Email: inkbit.info@gmail.com
