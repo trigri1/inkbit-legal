@@ -131,8 +131,8 @@
 
       .shots {
         display: grid;
-        grid-template-columns: repeat(2, minmax(0, 1fr));
-        gap: 0.75rem;
+        grid-template-columns: 1fr;
+        gap: 0.85rem;
       }
 
       .shot {
@@ -143,12 +143,17 @@
         background: #fafaf8;
       }
 
-      .shot-box {
+      .shot-media {
+        overflow: hidden;
+        border-radius: 12px;
+        border: 1px solid #d9d1c8;
+        background: #ede8e2;
+      }
+
+      .shot-image {
+        display: block;
         width: 100%;
-        aspect-ratio: 9 / 16;
-        border-radius: 8px;
-        border: 1px dashed #c5cbc7;
-        background: #f0f2ef;
+        height: auto;
       }
 
       .shot figcaption {
@@ -176,6 +181,10 @@
 
         .panel {
           padding: 1.8rem;
+        }
+
+        .shots {
+          grid-template-columns: repeat(2, minmax(0, 1fr));
         }
       }
     </style>
@@ -214,20 +223,88 @@
           <h2 id="screenshots-title">Screenshots</h2>
           <div class="shots">
             <figure class="shot">
-              <div class="shot-box" aria-hidden="true"></div>
-              <figcaption>Daily reading view</figcaption>
+              <div class="shot-media">
+                <img
+                  class="shot-image"
+                  src="assets/screens/01_today.png"
+                  alt="InkBit Today screen with daily reading card and reflection prompt"
+                  width="1280"
+                  height="2856"
+                  loading="lazy"
+                  decoding="async"
+                />
+              </div>
+              <figcaption>Today: read, reflect, and save a favorite in one calm flow.</figcaption>
             </figure>
             <figure class="shot">
-              <div class="shot-box" aria-hidden="true"></div>
-              <figcaption>Save quotes and favorites</figcaption>
+              <div class="shot-media">
+                <img
+                  class="shot-image"
+                  src="assets/screens/02_reader.png"
+                  alt="InkBit full reading view with focused typography and distraction-free layout"
+                  width="1280"
+                  height="2856"
+                  loading="lazy"
+                  decoding="async"
+                />
+              </div>
+              <figcaption>Full reading mode for deeper focus and fewer distractions.</figcaption>
             </figure>
             <figure class="shot">
-              <div class="shot-box" aria-hidden="true"></div>
-              <figcaption>Write quick reflections</figcaption>
+              <div class="shot-media">
+                <img
+                  class="shot-image"
+                  src="assets/screens/03_journal.png"
+                  alt="InkBit journal timeline showing grouped entries by day"
+                  width="1280"
+                  height="2856"
+                  loading="lazy"
+                  decoding="async"
+                />
+              </div>
+              <figcaption>Journal timeline with grouped entries and quick scanning.</figcaption>
             </figure>
             <figure class="shot">
-              <div class="shot-box" aria-hidden="true"></div>
-              <figcaption>Browse journal history</figcaption>
+              <div class="shot-media">
+                <img
+                  class="shot-image"
+                  src="assets/screens/04_journal_editor.png"
+                  alt="InkBit journal editor with concise daily note input"
+                  width="1280"
+                  height="2856"
+                  loading="lazy"
+                  decoding="async"
+                />
+              </div>
+              <figcaption>Quick journal editor for short, consistent reflections.</figcaption>
+            </figure>
+            <figure class="shot">
+              <div class="shot-media">
+                <img
+                  class="shot-image"
+                  src="assets/screens/05_library_history.png"
+                  alt="InkBit library history screen with favorites and timeline cards"
+                  width="1280"
+                  height="2856"
+                  loading="lazy"
+                  decoding="async"
+                />
+              </div>
+              <figcaption>Library history to revisit past readings and favorites.</figcaption>
+            </figure>
+            <figure class="shot">
+              <div class="shot-media">
+                <img
+                  class="shot-image"
+                  src="assets/screens/06_settings.png"
+                  alt="InkBit settings screen with appearance, reminders, and security options"
+                  width="1280"
+                  height="2856"
+                  loading="lazy"
+                  decoding="async"
+                />
+              </div>
+              <figcaption>Settings for appearance, reminders, and security preferences.</figcaption>
             </figure>
           </div>
         </section>
