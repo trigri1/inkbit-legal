@@ -3,388 +3,364 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>InkBit — A calm daily reading and reflection ritual</title>
+    <title>InkBit: Journal & Reading — Read, journal, and keep what stays</title>
     <meta
       name="description"
-      content="InkBit helps you build a calm daily reading and reflection ritual with favorites, brief reflections, journal history, and private local-first controls."
+      content="A calm place for focused reading, brief journaling, and a private history you can return to when it matters."
+    />
+    <meta
+      http-equiv="Content-Security-Policy"
+      content="default-src 'self'; script-src 'self' 'sha256-UO72aKkhBxrVhclDVJl7cnmk7b1QrMoBTD8swbeb3cI='; style-src 'self'; img-src 'self' data:; font-src 'self'; connect-src 'none'; object-src 'none'; base-uri 'none'; form-action 'self'; manifest-src 'self'; media-src 'self'; worker-src 'none'; block-all-mixed-content"
     />
     <meta name="robots" content="index,follow,max-image-preview:large" />
-    <meta name="theme-color" content="#f7f6f3" />
+    <meta name="referrer" content="no-referrer" />
+    <meta name="theme-color" content="#f4efe8" />
     <link rel="icon" type="image/png" sizes="32x32" href="assets/branding/favicon-32.png" />
     <link rel="apple-touch-icon" sizes="180x180" href="assets/branding/apple-touch-icon.png" />
-    <link rel="canonical" href="https://trigri1.github.io/inkbit-legal/" />
+    <link rel="manifest" href="site.webmanifest" />
+    <link rel="canonical" href="https://proj.github.io/inkbit-legal/" />
+    <link rel="preload" href="assets/fonts/newsreader-600.woff2" as="font" type="font/woff2" crossorigin />
+    <link rel="preload" href="assets/fonts/instrument-sans-400.woff2" as="font" type="font/woff2" crossorigin />
+    <link rel="stylesheet" href="assets/site.css" />
 
-    <meta property="og:title" content="InkBit — A calm daily reading and reflection ritual" />
+    <meta property="og:title" content="InkBit: Journal & Reading — Read, journal, and keep what stays" />
     <meta
       property="og:description"
-      content="Build a calm daily reading and reflection ritual. Save favorites, write brief reflections, and keep your journal history close."
+      content="A calm place for focused reading, brief journaling, and a private history you can return to when it matters."
     />
-    <meta property="og:url" content="https://trigri1.github.io/inkbit-legal/" />
+    <meta property="og:url" content="https://proj.github.io/inkbit-legal/" />
     <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="InkBit: Journal & Reading" />
     <meta
       property="og:image"
-      content="https://trigri1.github.io/inkbit-legal/assets/branding/inkbit_app_icon_1024.png"
+      content="https://proj.github.io/inkbit-legal/assets/branding/og-card.png"
     />
-    <meta property="og:image:alt" content="InkBit app icon" />
+    <meta property="og:image:alt" content="InkBit: Journal & Reading social preview" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
 
     <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content="InkBit — A calm daily reading and reflection ritual" />
+    <meta name="twitter:title" content="InkBit: Journal & Reading — Read, journal, and keep what stays" />
     <meta
       name="twitter:description"
-      content="A calm daily reading and reflection ritual with local-first privacy controls."
+      content="A calm place for focused reading, brief journaling, and a private history you can return to when it matters."
     />
     <meta
       name="twitter:image"
-      content="https://trigri1.github.io/inkbit-legal/assets/branding/inkbit_app_icon_1024.png"
+      content="https://proj.github.io/inkbit-legal/assets/branding/og-card.png"
     />
 
-    <script type="application/ld+json">
-      {
-        "@context": "https://schema.org",
-        "@type": "SoftwareApplication",
-        "name": "InkBit",
-        "applicationCategory": "LifestyleApplication",
-        "operatingSystem": "Android",
-        "url": "https://trigri1.github.io/inkbit-legal/",
-        "downloadUrl": "https://play.google.com/store/apps/details?id=com.trigri.inkbit",
-        "description": "InkBit is a calm daily reading and reflection ritual with favorites, brief journaling, history, and local-first privacy controls."
-      }
-    </script>
-
-    <style>
-      :root {
-        color-scheme: light;
-        --bg: #f7f6f3;
-        --surface: #ffffff;
-        --text: #1f2523;
-        --muted: #5d6763;
-        --border: #d8ddd9;
-        --accent: #2f4d40;
-        --accent-hover: #243d33;
-      }
-
-      * {
-        box-sizing: border-box;
-      }
-
-      body {
-        margin: 0;
-        background: var(--bg);
-        color: var(--text);
-        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial,
-          "Apple Color Emoji", "Segoe UI Emoji", sans-serif;
-        line-height: 1.6;
-      }
-
-      .wrap {
-        max-width: 860px;
-        margin: 0 auto;
-        padding: 1.25rem;
-      }
-
-      .panel {
-        background: var(--surface);
-        border: 1px solid var(--border);
-        border-radius: 14px;
-        padding: 1.25rem;
-      }
-
-      h1,
-      h2 {
-        margin-top: 0;
-        line-height: 1.25;
-      }
-
-      h1 {
-        margin-bottom: 0.5rem;
-        font-size: clamp(2rem, 6vw, 2.75rem);
-      }
-
-      h2 {
-        font-size: 1.2rem;
-      }
-
-      p {
-        margin: 0 0 1rem;
-      }
-
-      .tagline {
-        color: var(--muted);
-        font-size: 1.05rem;
-      }
-
-      .cta-row {
-        display: flex;
-        flex-wrap: wrap;
-        gap: 0.75rem;
-        margin-top: 1rem;
-      }
-
-      .btn {
-        display: inline-block;
-        padding: 0.7rem 1rem;
-        border-radius: 10px;
-        border: 1px solid transparent;
-        text-decoration: none;
-        font-weight: 600;
-      }
-
-      .btn-primary {
-        background: var(--accent);
-        color: #fff;
-      }
-
-      .btn-primary:hover,
-      .btn-primary:focus-visible {
-        background: var(--accent-hover);
-      }
-
-      .btn-secondary {
-        background: transparent;
-        color: var(--text);
-        border-color: var(--border);
-      }
-
-      section {
-        margin-top: 1rem;
-      }
-
-      ul {
-        margin: 0;
-        padding-left: 1.1rem;
-      }
-
-      .shots {
-        display: grid;
-        grid-template-columns: 1fr;
-        gap: 0.85rem;
-      }
-
-      .shot {
-        margin: 0;
-        border: 1px solid var(--border);
-        border-radius: 10px;
-        padding: 0.6rem;
-        background: #fafaf8;
-      }
-
-      .shot-media {
-        position: relative;
-        overflow: hidden;
-        border-radius: 12px;
-        border: 1px solid #d9d1c8;
-        background: #ede8e2;
-        aspect-ratio: 1280 / 2856;
-      }
-
-      .shot-image {
-        display: block;
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-        position: relative;
-        z-index: 1;
-      }
-
-      .shot-placeholder {
-        position: absolute;
-        inset: 0;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        text-align: center;
-        font-size: 0.9rem;
-        color: #6d6258;
-        background: #ede8e2;
-        padding: 0.75rem;
-      }
-
-      .shot-media.is-loaded .shot-placeholder {
-        display: none;
-      }
-
-      .shot-media.is-missing .shot-image {
-        display: none;
-      }
-
-      .shot figcaption {
-        margin-top: 0.5rem;
-        font-size: 0.9rem;
-        color: var(--muted);
-      }
-
-      footer {
-        margin-top: 1rem;
-        padding-top: 0.9rem;
-        border-top: 1px solid var(--border);
-        color: var(--muted);
-        font-size: 0.95rem;
-      }
-
-      footer a {
-        color: inherit;
-      }
-
-      @media (min-width: 700px) {
-        .wrap {
-          padding: 2rem 1.25rem;
-        }
-
-        .panel {
-          padding: 1.8rem;
-        }
-
-        .shots {
-          grid-template-columns: repeat(2, minmax(0, 1fr));
-        }
-      }
-    </style>
+    <script type="application/ld+json">{"@context":"https://schema.org","@type":"SoftwareApplication","name":"InkBit: Journal & Reading","applicationCategory":"LifestyleApplication","operatingSystem":"Android","url":"https://proj.github.io/inkbit-legal/","downloadUrl":"https://play.google.com/store/apps/details?id=com.trigri.inkbit","description":"InkBit is a calm place for focused reading, brief journaling, and a private history you can return to when it matters.","image":"https://proj.github.io/inkbit-legal/assets/branding/og-card.png"}</script>
+    <script src="assets/site.js" defer></script>
   </head>
   <body>
-    <main class="wrap">
-      <div class="panel">
-        <header>
-          <h1>InkBit</h1>
-          <p class="tagline">A calm daily reading and reflection ritual.</p>
-          <div class="cta-row">
-            <a
-              class="btn btn-primary"
-              href="https://play.google.com/store/apps/details?id=com.trigri.inkbit"
-              target="_blank"
-              rel="noopener noreferrer"
-              >Get it on Google Play</a
-            >
-            <a class="btn btn-secondary" href="privacy/">Read the Privacy Policy</a>
+    <a class="skip-link" href="#main">Skip to content</a>
+
+    <header class="site-header site-header--menu" data-site-header>
+      <div class="container site-header__inner">
+        <a class="brand" href="./" aria-label="InkBit home">
+          <img class="brand__icon" src="assets/branding/inkbit_app_icon_1024.png" alt="" width="64" height="64" />
+          <span class="brand__lockup">
+            <span class="brand__name">InkBit</span>
+            <span class="brand__tag">Journal &amp; Reading</span>
+          </span>
+        </a>
+
+        <button
+          class="site-header__menu-toggle"
+          type="button"
+          aria-label="Open section menu"
+          aria-controls="site-primary-nav"
+          aria-expanded="false"
+          data-menu-toggle
+          hidden
+        >
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+
+        <nav class="site-nav" id="site-primary-nav" aria-label="Primary">
+          <a href="#how-it-works">How it works</a>
+          <a href="#screens">Screens</a>
+          <a href="#faq">FAQ</a>
+          <a href="privacy/">Privacy</a>
+        </nav>
+
+        <div class="site-header__actions" aria-label="Store availability">
+          <button class="button button--disabled site-header__coming-soon" type="button" disabled aria-disabled="true">
+            Apple coming soon
+          </button>
+          <a
+            class="button button--primary site-header__cta"
+            href="https://play.google.com/store/apps/details?id=com.trigri.inkbit"
+            target="_blank"
+            rel="noopener noreferrer"
+            >Get on Google Play</a
+          >
+        </div>
+      </div>
+    </header>
+
+    <main id="main">
+      <section class="hero section">
+        <div class="container">
+          <div class="hero__panel">
+            <div class="hero__copy" data-reveal>
+              <h1 class="hero__title">A calm place to read, journal, and keep what stays.</h1>
+              <p class="hero__lede">
+                One focused reading, one clear note, and a private history you can return to when it matters.
+              </p>
+
+              <p class="hero__trust">
+                No account required. Notes stay on your device by default.
+              </p>
+
+              <div class="hero__meta" aria-label="Platform availability">
+                <span>Android available now</span>
+                <span>Local-first by design</span>
+              </div>
+            </div>
+
+            <div class="hero__visual" data-reveal>
+              <div class="device-showcase">
+                <div class="device-frame">
+                  <div class="device-screen">
+                    <img
+                      src="assets/screens/03_journal.png"
+                      alt="InkBit journal screen showing grouped daily reflection entries"
+                      width="1280"
+                      height="2856"
+                      decoding="async"
+                      fetchpriority="high"
+                    />
+                  </div>
+                </div>
+                <div class="device-showcase__card">
+                  <strong>See the shape of your days</strong>
+                  <p>Journal history keeps short reflections easy to revisit, compare, and continue over time.</p>
+                </div>
+              </div>
+            </div>
           </div>
-        </header>
+        </div>
+      </section>
 
-        <section aria-labelledby="features-title">
-          <h2 id="features-title">What you can do in InkBit</h2>
-          <ul>
-            <li>Build a daily reading ritual.</li>
-            <li>Save favorite lines and quotes.</li>
-            <li>Capture brief reflections in the moment.</li>
-            <li>Review your journal history over time.</li>
-            <li>Surface personal insights from your entries.</li>
-            <li>Use local-first privacy controls.</li>
-          </ul>
-        </section>
+      <section class="section" id="how-it-works">
+        <div class="container">
+          <div class="section-header" data-reveal>
+            <p class="section-kicker">How it works</p>
+            <h2 class="section-title">A quiet rhythm that fits into an ordinary day.</h2>
+            <p class="section-copy">
+              InkBit keeps the loop small enough to repeat: open one reading, leave one brief note, and let the rest of
+              the day stay quiet.
+            </p>
+          </div>
 
-        <section aria-labelledby="screenshots-title">
-          <h2 id="screenshots-title">Screenshots</h2>
-          <div class="shots">
-            <figure class="shot">
+          <div class="ritual-grid">
+            <article class="ritual-card" data-reveal>
+              <span class="ritual-card__number">01</span>
+              <h3>Read with focus</h3>
+              <p>A daily passage gives you one clear place to begin, without a feed, a queue, or extra noise.</p>
+            </article>
+
+            <article class="ritual-card" data-reveal>
+              <span class="ritual-card__number">02</span>
+              <h3>Capture one thought</h3>
+              <p>Brief reflections keep the ritual light enough to repeat, while still helping the reading stay with you.</p>
+            </article>
+
+            <article class="ritual-card" data-reveal>
+              <span class="ritual-card__number">03</span>
+              <h3>Return to what stayed</h3>
+              <p>Your history, favorites, and notes remain easy to revisit when you want to notice patterns over time.</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="screens">
+        <div class="container">
+          <div class="section-header" data-reveal>
+            <p class="section-kicker">Product loop</p>
+            <h2 class="section-title">A closer look at the screens that support the ritual.</h2>
+            <p class="section-copy">
+              The product stays sparse on purpose: one screen for today, one for full reading, one for reflection, and
+              a few more for the history and controls that support the habit.
+            </p>
+          </div>
+
+          <div class="story-grid">
+            <article class="story-card story-card--lead" data-reveal>
+              <div class="story-card__stack">
+                <div class="story-card__intro">
+                  <span class="story-card__eyebrow">Today</span>
+                  <h3>The daily loop is clear from the first screen.</h3>
+                  <p>Start with one passage, save a line, and leave one reflection before the day moves on.</p>
+                </div>
+                <ul class="story-card__points" aria-label="Core loop summary">
+                  <li>Daily reading</li>
+                  <li>One clear note</li>
+                  <li>Private history</li>
+                </ul>
+              </div>
               <div class="shot-media">
-                <div class="shot-placeholder">Screenshot unavailable</div>
+                <div class="shot-placeholder" aria-hidden="true">Today screen unavailable</div>
                 <img
                   class="shot-image"
                   src="assets/screens/01_today.png"
-                  alt="InkBit Today screen with daily reading card and reflection prompt"
+                  alt="InkBit Today screen with the daily reading card, reflection field, and favorite action"
                   width="1280"
                   height="2856"
-                  loading="lazy"
+                  loading="eager"
+                  fetchpriority="high"
                   decoding="async"
-                  onload="this.closest('.shot-media').classList.add('is-loaded')"
-                  onerror="this.closest('.shot-media').classList.add('is-missing')"
                 />
               </div>
-              <figcaption>Today: read, reflect, and save a favorite in one calm flow.</figcaption>
-            </figure>
-            <figure class="shot">
+            </article>
+
+            <article class="story-card story-card--reader" data-reveal>
+              <div class="story-card__intro">
+                <span class="story-card__eyebrow">Full reading</span>
+                <h3>Read the full text when you want more room.</h3>
+                <p>The reading view stays quiet and lets the passage carry the weight.</p>
+              </div>
               <div class="shot-media">
-                <div class="shot-placeholder">Screenshot unavailable</div>
+                <div class="shot-placeholder" aria-hidden="true">Reader screen unavailable</div>
                 <img
                   class="shot-image"
                   src="assets/screens/02_reader.png"
-                  alt="InkBit full reading view with focused typography and distraction-free layout"
+                  alt="InkBit full reading view showing a passage in a quiet layout"
                   width="1280"
                   height="2856"
                   loading="lazy"
                   decoding="async"
-                  onload="this.closest('.shot-media').classList.add('is-loaded')"
-                  onerror="this.closest('.shot-media').classList.add('is-missing')"
                 />
               </div>
-              <figcaption>Full reading mode for deeper focus and fewer distractions.</figcaption>
-            </figure>
-            <figure class="shot">
-              <div class="shot-media">
-                <div class="shot-placeholder">Screenshot unavailable</div>
-                <img
-                  class="shot-image"
-                  src="assets/screens/03_journal.png"
-                  alt="InkBit journal timeline showing grouped entries by day"
-                  width="1280"
-                  height="2856"
-                  loading="lazy"
-                  decoding="async"
-                  onload="this.closest('.shot-media').classList.add('is-loaded')"
-                  onerror="this.closest('.shot-media').classList.add('is-missing')"
-                />
+            </article>
+
+            <article class="story-card story-card--editor" data-reveal>
+              <div class="story-card__intro">
+                <span class="story-card__eyebrow">Reflection</span>
+                <h3>Write while the thought is still clear.</h3>
+                <p>A short editor keeps reflection light enough to repeat.</p>
               </div>
-              <figcaption>Journal timeline with grouped entries and quick scanning.</figcaption>
-            </figure>
-            <figure class="shot">
               <div class="shot-media">
-                <div class="shot-placeholder">Screenshot unavailable</div>
+                <div class="shot-placeholder" aria-hidden="true">Editor screen unavailable</div>
                 <img
                   class="shot-image"
                   src="assets/screens/04_journal_editor.png"
-                  alt="InkBit journal editor with concise daily note input"
+                  alt="InkBit journal editor for a short daily reflection"
                   width="1280"
                   height="2856"
                   loading="lazy"
                   decoding="async"
-                  onload="this.closest('.shot-media').classList.add('is-loaded')"
-                  onerror="this.closest('.shot-media').classList.add('is-missing')"
                 />
               </div>
-              <figcaption>Quick journal editor for short, consistent reflections.</figcaption>
-            </figure>
-            <figure class="shot">
+            </article>
+
+            <article class="story-card story-card--library" data-reveal>
+              <div class="story-card__intro">
+                <span class="story-card__eyebrow">Library</span>
+                <h3>Return to what mattered.</h3>
+                <p>History and favorites keep past readings close without losing context.</p>
+              </div>
               <div class="shot-media">
-                <div class="shot-placeholder">Screenshot unavailable</div>
+                <div class="shot-placeholder" aria-hidden="true">Library screen unavailable</div>
                 <img
                   class="shot-image"
                   src="assets/screens/05_library_history.png"
-                  alt="InkBit library history screen with favorites and timeline cards"
+                  alt="InkBit library history showing saved readings and favorites"
                   width="1280"
                   height="2856"
                   loading="lazy"
                   decoding="async"
-                  onload="this.closest('.shot-media').classList.add('is-loaded')"
-                  onerror="this.closest('.shot-media').classList.add('is-missing')"
                 />
               </div>
-              <figcaption>Library history to revisit past readings and favorites.</figcaption>
-            </figure>
-            <figure class="shot">
+            </article>
+
+            <article class="story-card story-card--settings" data-reveal>
+              <div class="story-card__intro">
+                <span class="story-card__eyebrow">Control</span>
+                <h3>Adjust reminders, appearance, and privacy.</h3>
+                <p>Quiet defaults stay easy to review and change.</p>
+              </div>
               <div class="shot-media">
-                <div class="shot-placeholder">Screenshot unavailable</div>
+                <div class="shot-placeholder" aria-hidden="true">Settings screen unavailable</div>
                 <img
                   class="shot-image"
                   src="assets/screens/06_settings.png"
-                  alt="InkBit settings screen with appearance, reminders, and security options"
+                  alt="InkBit settings screen with appearance, reminders, and security controls"
                   width="1280"
                   height="2856"
                   loading="lazy"
                   decoding="async"
-                  onload="this.closest('.shot-media').classList.add('is-loaded')"
-                  onerror="this.closest('.shot-media').classList.add('is-missing')"
                 />
               </div>
-              <figcaption>Settings for appearance, reminders, and security preferences.</figcaption>
-            </figure>
+            </article>
           </div>
-        </section>
+        </div>
+      </section>
 
-        <footer>
-          <p>
-            Support: <a href="mailto:inkbit.info@gmail.com">inkbit.info@gmail.com</a>
-          </p>
-          <p>&copy; 2026 InkBit. All rights reserved.</p>
-        </footer>
-      </div>
+      <section class="section" id="faq">
+        <div class="container">
+          <div class="section-header section-header--compact" data-reveal>
+            <p class="section-kicker">FAQ</p>
+            <h2 class="section-title">A few practical details before you install.</h2>
+          </div>
+
+          <div class="faq" data-reveal>
+            <details>
+              <summary>What is InkBit?</summary>
+              <p>
+                InkBit is a calm journal and reading app built around one daily loop: one passage, one brief note, and
+                one private place to return later.
+              </p>
+            </details>
+
+            <details>
+              <summary>Is InkBit available on iPhone?</summary>
+              <p>Not yet. Android is available now, and the iPhone version is planned next.</p>
+            </details>
+
+            <details>
+              <summary>Does InkBit require an account?</summary>
+              <p>
+                No. You can use InkBit without creating an account or sharing personal profile information with the app.
+              </p>
+            </details>
+
+            <details>
+              <summary>Where are my notes stored?</summary>
+              <p>
+                Notes, favorites, and reflections stay on your device by default. The privacy policy explains analytics,
+                crash reporting, notifications, and the few cases where service providers are involved.
+              </p>
+            </details>
+          </div>
+        </div>
+      </section>
     </main>
+
+    <footer class="site-footer">
+      <div class="container">
+        <div class="site-footer__panel" data-reveal>
+          <div class="site-footer__top">
+            <p class="section-kicker">InkBit</p>
+            <h2 class="site-footer__title">Calm reading, light journaling, and a private place to return.</h2>
+            <div class="site-footer__links">
+              <a href="mailto:inkbit.info@gmail.com">inkbit.info@gmail.com</a>
+              <a href="privacy/">Privacy policy</a>
+            </div>
+          </div>
+
+          <div class="site-footer__meta">
+            <span>Android available now</span>
+            <span>iPhone coming soon</span>
+            <span>&copy; 2026 InkBit</span>
+          </div>
+        </div>
+      </div>
+    </footer>
   </body>
 </html>

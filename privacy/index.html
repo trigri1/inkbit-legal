@@ -3,185 +3,225 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>InkBit Privacy Policy</title>
-    <link rel="icon" type="image/png" sizes="32x32" href="../assets/branding/favicon-32.png" />
-    <link rel="apple-touch-icon" sizes="180x180" href="../assets/branding/apple-touch-icon.png" />
+    <title>InkBit: Journal & Reading Privacy Policy</title>
     <meta
       name="description"
-      content="InkBit privacy policy covering local data, analytics, crash reporting, notifications, security, and user choices."
+      content="Privacy policy for InkBit: Journal & Reading, covering local data, analytics, crash reporting, notifications, security, and user choices."
     />
-    <style>
-      :root {
-        color-scheme: light;
-        --bg: #f7f6f3;
-        --surface: #ffffff;
-        --text: #1f2523;
-        --muted: #5d6763;
-        --border: #d8ddd9;
-      }
-
-      * {
-        box-sizing: border-box;
-      }
-
-      body {
-        margin: 0;
-        background: var(--bg);
-        color: var(--text);
-        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial,
-          "Apple Color Emoji", "Segoe UI Emoji", sans-serif;
-        line-height: 1.6;
-      }
-
-      main {
-        max-width: 860px;
-        margin: 0 auto;
-        padding: 1.25rem;
-      }
-
-      article {
-        background: var(--surface);
-        border: 1px solid var(--border);
-        border-radius: 14px;
-        padding: 1.25rem;
-      }
-
-      h1,
-      h2 {
-        margin-top: 0;
-        line-height: 1.25;
-      }
-
-      h1 {
-        margin-bottom: 0.5rem;
-        font-size: clamp(1.8rem, 5.5vw, 2.4rem);
-      }
-
-      h2 {
-        margin-top: 1.2rem;
-        font-size: 1.15rem;
-      }
-
-      p {
-        margin: 0 0 0.9rem;
-      }
-
-      ul {
-        margin: 0 0 0.9rem;
-        padding-left: 1.1rem;
-      }
-
-      .meta,
-      .top-link {
-        color: var(--muted);
-      }
-
-      .top-link a,
-      a {
-        color: inherit;
-      }
-
-      @media (min-width: 700px) {
-        main {
-          padding: 2rem 1.25rem;
-        }
-
-        article {
-          padding: 1.8rem;
-        }
-      }
-    </style>
+    <meta
+      http-equiv="Content-Security-Policy"
+      content="default-src 'self'; script-src 'self'; style-src 'self'; img-src 'self' data:; font-src 'self'; connect-src 'none'; object-src 'none'; base-uri 'none'; form-action 'self'; manifest-src 'self'; media-src 'self'; worker-src 'none'; block-all-mixed-content"
+    />
+    <meta name="robots" content="index,follow,max-image-preview:large" />
+    <meta name="referrer" content="no-referrer" />
+    <meta name="theme-color" content="#f4efe8" />
+    <link rel="icon" type="image/png" sizes="32x32" href="../assets/branding/favicon-32.png" />
+    <link rel="apple-touch-icon" sizes="180x180" href="../assets/branding/apple-touch-icon.png" />
+    <link rel="manifest" href="../site.webmanifest" />
+    <link rel="canonical" href="https://proj.github.io/inkbit-legal/privacy/" />
+    <link rel="preload" href="../assets/fonts/newsreader-600.woff2" as="font" type="font/woff2" crossorigin />
+    <link rel="preload" href="../assets/fonts/instrument-sans-400.woff2" as="font" type="font/woff2" crossorigin />
+    <link rel="stylesheet" href="../assets/site.css" />
+    <meta property="og:title" content="InkBit: Journal & Reading Privacy Policy" />
+    <meta
+      property="og:description"
+      content="Privacy policy for InkBit: Journal & Reading, covering local data, analytics, crash reporting, notifications, security, and user choices."
+    />
+    <meta property="og:url" content="https://proj.github.io/inkbit-legal/privacy/" />
+    <meta property="og:type" content="article" />
+    <meta property="og:site_name" content="InkBit: Journal & Reading" />
+    <meta property="og:image" content="https://proj.github.io/inkbit-legal/assets/branding/og-card.png" />
+    <meta property="og:image:alt" content="InkBit: Journal & Reading social preview" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="InkBit: Journal & Reading Privacy Policy" />
+    <meta
+      name="twitter:description"
+      content="Privacy policy for InkBit: Journal & Reading, covering local data, analytics, crash reporting, notifications, security, and user choices."
+    />
+    <meta name="twitter:image" content="https://proj.github.io/inkbit-legal/assets/branding/og-card.png" />
+    <script src="../assets/site.js" defer></script>
   </head>
-  <body>
-    <main>
-      <article>
-        <!-- Source of truth: privacy/privacy_policy.md -->
-        <p class="top-link"><a href="../">Back to InkBit</a></p>
+  <body class="policy-page">
+    <a class="skip-link" href="#main">Skip to content</a>
 
-        <h1>InkBit Privacy Policy</h1>
-        <p class="meta"><strong>Last updated:</strong> February 17, 2026</p>
+    <header class="site-header site-header--menu" data-site-header>
+      <div class="container site-header__inner">
+        <a class="brand" href="../" aria-label="InkBit home">
+          <img
+            class="brand__icon"
+            src="../assets/branding/inkbit_app_icon_1024.png"
+            alt=""
+            width="64"
+            height="64"
+          />
+          <span class="brand__lockup">
+            <span class="brand__name">InkBit</span>
+            <span class="brand__tag">Journal &amp; Reading</span>
+          </span>
+        </a>
 
-        <p>
-          InkBit works without accounts. You can use the app without sharing your name, email, or phone number.
-          Journal entries and reflections stay on your device unless you choose to share them.
-        </p>
+        <button
+          class="site-header__menu-toggle"
+          type="button"
+          aria-label="Open site menu"
+          aria-controls="site-primary-nav"
+          aria-expanded="false"
+          data-menu-toggle
+          hidden
+        >
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
 
-        <h2>1. Local Data (On Your Device)</h2>
-        <ul>
-          <li>
-            Your journal entries, favorites, reflections, and app preferences (for example theme, reminders, and
-            app-lock setting) are stored locally on your device.
-          </li>
-          <li>This local content is not uploaded to our servers by default.</li>
-        </ul>
+        <nav class="site-nav" id="site-primary-nav" aria-label="Primary">
+          <a href="../">Home</a>
+          <a href="./" aria-current="page">Privacy</a>
+        </nav>
 
-        <h2>2. Analytics and Crash Reports</h2>
-        <ul>
-          <li>
-            We use Firebase Analytics to understand feature usage, such as screen opens, interactions, and
-            navigation patterns.
-          </li>
-          <li>
-            We use Firebase Crashlytics to collect crash and diagnostic data, such as app version, device details,
-            stack traces, and breadcrumbs, so we can fix issues.
-          </li>
-        </ul>
+        <div class="site-header__actions" aria-label="Store availability">
+          <button class="button button--disabled site-header__coming-soon" type="button" disabled aria-disabled="true">
+            Apple coming soon
+          </button>
+          <a
+            class="button button--primary site-header__cta"
+            href="https://play.google.com/store/apps/details?id=com.trigri.inkbit"
+            target="_blank"
+            rel="noopener noreferrer"
+            >Get on Google Play</a
+          >
+        </div>
+      </div>
+    </header>
 
-        <h2>3. Notifications</h2>
-        <ul>
-          <li>
-            If you enable push notifications, Firebase Cloud Messaging may process a device token and topic
-            subscription to deliver messages to your device.
-          </li>
-          <li>
-            Daily reading reminders and daily journal reminders are scheduled locally on your device, based on your
-            notification settings.
-          </li>
-        </ul>
+    <main class="policy-main" id="main">
+      <section class="section policy-section">
+        <div class="container">
+          <article class="policy-article" data-reveal>
+            <div class="policy-hero">
+              <div class="policy-hero__copy">
+                <a class="policy-back" href="../">Back to InkBit</a>
+                <p class="section-kicker">Privacy</p>
+                <h1>InkBit Privacy Policy</h1>
+                <p class="policy-meta"><strong>Last updated:</strong> February 17, 2026</p>
+                <p class="policy-summary">
+                  InkBit works without accounts. You can use the app without sharing your name, email, or phone
+                  number. Journal entries and reflections stay on your device unless you choose to share them.
+                </p>
+              </div>
 
-        <h2>4. Security and App Lock</h2>
-        <ul>
-          <li>
-            If you enable app lock, biometric or device credential checks are handled by your operating system.
-            InkBit receives only the authentication result (success or failure).
-          </li>
-          <li>
-            When app lock is enabled, Android recent-app snapshots are protected to reduce content exposure.
-          </li>
-        </ul>
+              <aside class="policy-card" aria-label="Privacy at a glance">
+                <p class="policy-card__title">At a glance</p>
+                <ul class="policy-card__list">
+                  <li>No account required</li>
+                  <li>Notes and preferences stay on your device by default</li>
+                  <li>Analytics and crash reports help us improve stability</li>
+                </ul>
+                <a class="policy-card__link" href="mailto:inkbit.info@gmail.com">inkbit.info@gmail.com</a>
+              </aside>
+            </div>
 
-        <h2>5. Content Updates</h2>
-        <ul>
-          <li>
-            When a notification payload includes a secure update URL, the app may download updated reading content
-            (JSON).
-          </li>
-          <li>
-            When your device makes content or update requests, delivery providers (including hosting/CDN services and
-            Google Play) may receive standard connection or update metadata, such as IP address, app version, and
-            install status.
-          </li>
-        </ul>
+            <div class="policy-prose">
+              <h2>1. Local Data (On Your Device)</h2>
+              <ul>
+                <li>
+                  Your journal entries, favorites, reflections, and app preferences (for example theme, reminders, and
+                  app-lock setting) are stored locally on your device.
+                </li>
+                <li>This local content is not uploaded to our servers by default.</li>
+              </ul>
 
-        <h2>6. Data Sharing</h2>
-        <ul>
-          <li>We do not sell your personal data.</li>
-          <li>
-            We share data only with service providers required to operate the app, including Firebase/Google, Google
-            Play, and content hosting. If you use share, content is sent only to the app you select.
-          </li>
-        </ul>
+              <h2>2. Analytics and Crash Reports</h2>
+              <ul>
+                <li>
+                  We use Firebase Analytics to understand feature usage, such as screen opens, interactions, and
+                  navigation patterns.
+                </li>
+                <li>
+                  We use Firebase Crashlytics to collect crash and diagnostic data, such as app version, device
+                  details, stack traces, and breadcrumbs, so we can fix issues.
+                </li>
+              </ul>
 
-        <h2>7. Your Choices</h2>
-        <ul>
-          <li>You can disable notifications in your device settings.</li>
-          <li>You can disable app lock at any time in app settings.</li>
-          <li>You can remove local app data by clearing app storage or uninstalling the app.</li>
-        </ul>
+              <h2>3. Notifications</h2>
+              <ul>
+                <li>
+                  If you enable push notifications, Firebase Cloud Messaging may process a device token and topic
+                  subscription to deliver messages to your device.
+                </li>
+                <li>
+                  Daily reading reminders and daily journal reminders are scheduled locally on your device, based on
+                  your notification settings.
+                </li>
+              </ul>
 
-        <h2>8. Contact</h2>
-        <p>Email: <a href="mailto:inkbit.info@gmail.com">inkbit.info@gmail.com</a></p>
-      </article>
+              <h2>4. Security and App Lock</h2>
+              <ul>
+                <li>
+                  If you enable app lock, biometric or device credential checks are handled by your operating system.
+                  InkBit receives only the authentication result (success or failure).
+                </li>
+                <li>When app lock is enabled, Android recent-app snapshots are protected to reduce content exposure.</li>
+              </ul>
+
+              <h2>5. Content Updates</h2>
+              <ul>
+                <li>
+                  When a notification payload includes a secure update URL, the app may download updated reading
+                  content (JSON).
+                </li>
+                <li>
+                  When your device makes content or update requests, delivery providers (including hosting/CDN services
+                  and Google Play) may receive standard connection or update metadata, such as IP address, app
+                  version, and install status.
+                </li>
+              </ul>
+
+              <h2>6. Data Sharing</h2>
+              <ul>
+                <li>We do not sell your personal data.</li>
+                <li>
+                  We share data only with service providers required to operate the app, including Firebase/Google,
+                  Google Play, and content hosting. If you use share, content is sent only to the app you select.
+                </li>
+              </ul>
+
+              <h2>7. Your Choices</h2>
+              <ul>
+                <li>You can disable notifications in your device settings.</li>
+                <li>You can disable app lock at any time in app settings.</li>
+                <li>You can remove local app data by clearing app storage or uninstalling the app.</li>
+              </ul>
+
+              <h2>8. Contact</h2>
+              <p>Email: <a href="mailto:inkbit.info@gmail.com">inkbit.info@gmail.com</a></p>
+            </div>
+          </article>
+        </div>
+      </section>
     </main>
+
+    <footer class="site-footer">
+      <div class="container">
+        <div class="site-footer__panel" data-reveal>
+          <div class="site-footer__top">
+            <p class="section-kicker">InkBit</p>
+            <h2 class="site-footer__title">Calm reading, light journaling, and a clear privacy policy.</h2>
+            <div class="site-footer__links">
+              <a href="../">Home</a>
+              <a href="mailto:inkbit.info@gmail.com">inkbit.info@gmail.com</a>
+            </div>
+          </div>
+
+          <div class="site-footer__meta">
+            <span>Android available now</span>
+            <span>iPhone coming soon</span>
+            <span>&copy; 2026 InkBit</span>
+          </div>
+        </div>
+      </div>
+    </footer>
   </body>
 </html>
