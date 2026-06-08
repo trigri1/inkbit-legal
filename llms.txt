@@ -1,0 +1,70 @@
+# InkBit
+
+> InkBit is a calm, private reading journal Android app for saving meaningful quotes, excerpts, poems, and small reflections in one quiet literary space.
+
+InkBit is designed for readers who want a personal literary journal without social feeds, streak pressure, or public performance. Journal entries, favorites, and reflections stay on your device by default.
+
+## Canonical site
+
+- Home: https://trigri1.github.io/inkbit-legal/
+- Privacy policy: https://trigri1.github.io/inkbit-legal/privacy/
+- Sitemap: https://trigri1.github.io/inkbit-legal/sitemap.xml
+
+## Download
+
+- Google Play (Android): https://play.google.com/store/apps/details?id=com.trigri.inkbit
+- Package ID: com.trigri.inkbit
+- iPhone: not available yet
+
+## What InkBit is
+
+InkBit is a private reading reflection app shaped around reading and memory rather than long daily entries, productivity tracking, or social sharing. Users can save loved passages, quotes, poems, and excerpts, write small notes around what a line opened, and return to a quiet archive over time.
+
+## Core features
+
+- Save meaningful quotes, excerpts, and poems
+- Write brief private reflections tied to reading
+- Revisit favorites and reading history locally
+- Optional app lock and local reminders
+- Light and dark appearance
+- No account required to use the app
+
+## Privacy summary
+
+- No online account required
+- Journal entries and reflections stay on your device unless you choose to share them
+- Firebase Analytics is used for basic app usage (not journal content)
+- Firebase Crashlytics is used for crash diagnostics
+- Optional push notifications via Firebase Cloud Messaging
+- Full policy: https://trigri1.github.io/inkbit-legal/privacy/
+
+## FAQ
+
+### What is InkBit?
+A private reading reflection app for keeping meaningful excerpts, quotes, poems, and small thoughts in one calm literary space.
+
+### Is InkBit a journaling app?
+Yes, but it is shaped around reading and memory rather than long daily entries, social sharing, or productivity tracking.
+
+### Can I save quotes and passages?
+Yes. InkBit is made for saving loved passages, quotes, poems, excerpts, and the reflections that grow around them.
+
+### Is my writing private?
+Journal entries, favorites, reflections, and preferences are stored locally on your device unless you choose to share them.
+
+### Does InkBit use streaks or habit pressure?
+No. InkBit is a quiet space for one thought at a time, without social feeds or streak pressure.
+
+### Who is InkBit for?
+Readers, journal keepers, students, writers, and anyone who wants a calm private thought journal for words worth returning to.
+
+### Is InkBit available on Android?
+Yes. InkBit is available on Google Play for Android.
+
+## Contact
+
+- Email: inkbit.info@gmail.com
+
+## Search keywords
+
+private reading journal, quote saver app, literary journal app, reading reflection app, save book quotes, private journaling app, calm journal app, excerpt keeper, poem journal, reading memory app, InkBit
