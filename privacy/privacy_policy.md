@@ -1,15 +1,15 @@
 # InkBit Privacy Policy
 
-**Last updated:** February 17, 2026
+**Last updated:** June 8, 2026
 
-InkBit works without accounts. You can use the app without sharing your name, email, or phone number. Journal entries and reflections stay on your device unless you choose to share them.
+InkBit works without online accounts. You can use the app without sharing your name, email, or phone number. Journal entries and reflections stay on your device unless you choose to share them.
 
 ## 1. Local Data (On Your Device)
 - Your journal entries, favorites, reflections, and app preferences (for example theme, reminders, and app-lock setting) are stored locally on your device.
 - This local content is not uploaded to our servers by default.
 
 ## 2. Analytics and Crash Reports
-- We use Firebase Analytics to understand feature usage, such as screen opens, interactions, and navigation patterns.
+- We use Firebase Analytics to understand basic app usage and improve InkBit. Analytics does not include your journal entries or reflections.
 - We use Firebase Crashlytics to collect crash and diagnostic data, such as app version, device details, stack traces, and breadcrumbs, so we can fix issues.
 
 ## 3. Notifications

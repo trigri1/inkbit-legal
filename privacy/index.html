@@ -4,113 +4,440 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>InkBit Privacy Policy</title>
-    <link rel="icon" type="image/png" sizes="32x32" href="../assets/branding/favicon-32.png" />
-    <link rel="apple-touch-icon" sizes="180x180" href="../assets/branding/apple-touch-icon.png" />
     <meta
       name="description"
       content="InkBit privacy policy covering local data, analytics, crash reporting, notifications, security, and user choices."
     />
+    <meta name="robots" content="index,follow" />
+    <meta name="theme-color" content="#F6EDE9" media="(prefers-color-scheme: light)" />
+    <meta name="theme-color" content="#17151C" media="(prefers-color-scheme: dark)" />
+    <link rel="icon" type="image/png" href="../assets/branding/logo.png" />
+    <link rel="apple-touch-icon" href="../assets/branding/logo.png" />
+    <link rel="canonical" href="https://trigri1.github.io/inkbit-legal/privacy/" />
+    <script>
+      (() => {
+        try {
+          const savedTheme = localStorage.getItem("inkbit-theme");
+          if (savedTheme === "light" || savedTheme === "dark") {
+            document.documentElement.dataset.theme = savedTheme;
+          }
+        } catch (error) {
+          document.documentElement.removeAttribute("data-theme");
+        }
+      })();
+    </script>
     <style>
       :root {
+        color-scheme: light dark;
+        --bg: #f6ede9;
+        --bg-soft: #f8f0ec;
+        --surface: #fbf2ea;
+        --elevated: #fff7f0;
+        --text: #1f2633;
+        --text-secondary: #5f6072;
+        --text-muted: #878194;
+        --accent: #9b8ab8;
+        --accent-soft: #e6ddec;
+        --border: #ddd0ca;
+        --border-soft: #e9deda;
+        --highlight-soft: #eee4ec;
+        --dark-bg: #17151c;
+        --theme-control-bg: #fbf2ea;
+        --theme-choice-text: #5f6072;
+        --theme-selected-bg: #e6ddec;
+        --theme-selected-text: #1f2633;
+        --font-serif: Literata, Georgia, "Times New Roman", serif;
+        --font-sans: "Work Sans", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont,
+          "Segoe UI", sans-serif;
+      }
+
+      @media (prefers-color-scheme: dark) {
+        :root {
+          --bg: #17151c;
+          --bg-soft: #1d1922;
+          --surface: #211d25;
+          --elevated: #2d2631;
+          --text: #f4ede4;
+          --text-secondary: #c9bfce;
+          --text-muted: #938a9f;
+          --accent: #b7a6d8;
+          --accent-soft: #3a3148;
+          --border: #3f3745;
+          --border-soft: #332c38;
+          --highlight-soft: #332b40;
+          --theme-control-bg: #211d25;
+          --theme-choice-text: #c9bfce;
+          --theme-selected-bg: #3a3148;
+          --theme-selected-text: #f4ede4;
+        }
+      }
+
+      :root[data-theme="light"] {
         color-scheme: light;
-        --bg: #f7f6f3;
-        --surface: #ffffff;
-        --text: #1f2523;
-        --muted: #5d6763;
-        --border: #d8ddd9;
+        --bg: #f6ede9;
+        --bg-soft: #f8f0ec;
+        --surface: #fbf2ea;
+        --elevated: #fff7f0;
+        --text: #1f2633;
+        --text-secondary: #5f6072;
+        --text-muted: #878194;
+        --accent: #9b8ab8;
+        --accent-soft: #e6ddec;
+        --border: #ddd0ca;
+        --border-soft: #e9deda;
+        --highlight-soft: #eee4ec;
+        --theme-control-bg: #fbf2ea;
+        --theme-choice-text: #5f6072;
+        --theme-selected-bg: #e6ddec;
+        --theme-selected-text: #1f2633;
+      }
+
+      :root[data-theme="dark"] {
+        color-scheme: dark;
+        --bg: #17151c;
+        --bg-soft: #1d1922;
+        --surface: #211d25;
+        --elevated: #2d2631;
+        --text: #f4ede4;
+        --text-secondary: #c9bfce;
+        --text-muted: #938a9f;
+        --accent: #b7a6d8;
+        --accent-soft: #3a3148;
+        --border: #3f3745;
+        --border-soft: #332c38;
+        --highlight-soft: #332b40;
+        --theme-control-bg: #211d25;
+        --theme-choice-text: #c9bfce;
+        --theme-selected-bg: #3a3148;
+        --theme-selected-text: #f4ede4;
       }
 
       * {
         box-sizing: border-box;
       }
 
+      html {
+        scroll-behavior: smooth;
+      }
+
       body {
         margin: 0;
-        background: var(--bg);
+        padding-bottom: 86px;
+        background:
+          radial-gradient(circle at 18% 8%, var(--highlight-soft), transparent 32rem),
+          linear-gradient(180deg, var(--bg), var(--bg-soft) 48%, var(--bg));
         color: var(--text);
-        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial,
-          "Apple Color Emoji", "Segoe UI Emoji", sans-serif;
-        line-height: 1.6;
+        font-family: var(--font-sans);
+        line-height: 1.75;
+        text-rendering: optimizeLegibility;
       }
 
-      main {
-        max-width: 860px;
-        margin: 0 auto;
-        padding: 1.25rem;
+      body::before {
+        position: fixed;
+        inset: 0;
+        z-index: -1;
+        pointer-events: none;
+        content: "";
+        background-image:
+          linear-gradient(rgba(95, 96, 114, 0.035) 1px, transparent 1px),
+          linear-gradient(90deg, rgba(95, 96, 114, 0.03) 1px, transparent 1px);
+        background-size: 44px 44px;
+        mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.62), transparent 68%);
       }
 
-      article {
-        background: var(--surface);
-        border: 1px solid var(--border);
-        border-radius: 14px;
-        padding: 1.25rem;
-      }
-
-      h1,
-      h2 {
-        margin-top: 0;
-        line-height: 1.25;
-      }
-
-      h1 {
-        margin-bottom: 0.5rem;
-        font-size: clamp(1.8rem, 5.5vw, 2.4rem);
-      }
-
-      h2 {
-        margin-top: 1.2rem;
-        font-size: 1.15rem;
-      }
-
-      p {
-        margin: 0 0 0.9rem;
-      }
-
-      ul {
-        margin: 0 0 0.9rem;
-        padding-left: 1.1rem;
-      }
-
-      .meta,
-      .top-link {
-        color: var(--muted);
-      }
-
-      .top-link a,
       a {
         color: inherit;
       }
 
-      @media (min-width: 700px) {
-        main {
-          padding: 2rem 1.25rem;
+      :focus-visible {
+        outline: 3px solid var(--accent);
+        outline-offset: 4px;
+      }
+
+      .site-header {
+        position: sticky;
+        top: 0;
+        z-index: 10;
+        border-bottom: 1px solid var(--border-soft);
+        background: color-mix(in srgb, var(--bg), transparent 8%);
+        backdrop-filter: blur(18px);
+      }
+
+      .nav-shell {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: min(calc(100% - 32px), 1120px);
+        min-height: 72px;
+        margin: 0 auto;
+        gap: 16px;
+      }
+
+      .brand {
+        display: inline-flex;
+        align-items: center;
+        gap: 10px;
+        font-family: var(--font-serif);
+        font-size: 1.18rem;
+        text-decoration: none;
+      }
+
+      .brand-mark {
+        width: 34px;
+        height: 34px;
+        border-radius: 50%;
+        object-fit: contain;
+        filter: drop-shadow(0 8px 18px rgba(89, 75, 104, 0.16));
+      }
+
+      .nav-links {
+        display: none;
+        align-items: center;
+        gap: 22px;
+        color: var(--text-secondary);
+        font-size: 0.9rem;
+        font-weight: 700;
+      }
+
+      .nav-links a {
+        text-decoration: none;
+      }
+
+      .nav-links a:hover,
+      .footer a:hover {
+        color: var(--text);
+      }
+
+      .button {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        min-height: 40px;
+        padding: 0 16px;
+        border: 1px solid var(--border);
+        border-radius: 999px;
+        color: var(--text-secondary);
+        font-size: 0.92rem;
+        font-weight: 800;
+        line-height: 1;
+        text-decoration: none;
+      }
+
+      main {
+        width: min(calc(100% - 32px), 860px);
+        margin: 0 auto;
+        padding: 64px 0 92px;
+      }
+
+      .policy-hero {
+        margin-bottom: 34px;
+      }
+
+      .eyebrow {
+        margin: 0 0 14px;
+        color: var(--accent);
+        font-size: 0.78rem;
+        font-weight: 900;
+        letter-spacing: 0.16em;
+        text-transform: uppercase;
+      }
+
+      h1,
+      h2 {
+        font-family: var(--font-serif);
+        font-weight: 500;
+        line-height: 1.08;
+      }
+
+      h1 {
+        width: min(100%, 690px);
+        margin: 0;
+        font-size: clamp(3rem, 12vw, 5.4rem);
+      }
+
+      h2 {
+        margin: 2.2rem 0 0.75rem;
+        font-size: clamp(1.45rem, 4vw, 2rem);
+      }
+
+      .meta {
+        margin: 18px 0 0;
+        color: var(--text-muted);
+      }
+
+      article {
+        padding: clamp(24px, 5vw, 46px);
+        border: 1px solid var(--border-soft);
+        border-radius: 30px;
+        background: var(--theme-control-bg);
+        box-shadow: 0 24px 70px rgba(89, 75, 104, 0.12);
+      }
+
+      p {
+        margin: 0 0 1rem;
+        color: var(--theme-choice-text);
+      }
+
+      ul {
+        margin: 0 0 1rem;
+        padding-left: 1.1rem;
+        color: var(--text-secondary);
+      }
+
+      li + li {
+        margin-top: 0.55rem;
+      }
+
+      .source-note {
+        margin-bottom: 1.4rem;
+        color: var(--text-muted);
+        font-size: 0.9rem;
+      }
+
+      .footer {
+        padding: 38px 0;
+        border-top: 1px solid var(--border-soft);
+        color: var(--text-muted);
+        font-size: 0.92rem;
+      }
+
+      .footer-inner {
+        display: flex;
+        flex-direction: column;
+        gap: 14px;
+        width: min(calc(100% - 32px), 1120px);
+        margin: 0 auto;
+      }
+
+      .footer-links {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 14px;
+      }
+
+      .theme-switcher {
+        position: fixed;
+        right: max(16px, env(safe-area-inset-right));
+        bottom: max(16px, env(safe-area-inset-bottom));
+        z-index: 20;
+        display: inline-flex;
+        align-items: center;
+        gap: 4px;
+        width: fit-content;
+        padding: 4px;
+        border: 1px solid var(--border-soft);
+        border-radius: 999px;
+        background: color-mix(in srgb, var(--surface), transparent 8%);
+        box-shadow: 0 14px 42px rgba(31, 38, 51, 0.16);
+        backdrop-filter: blur(16px);
+      }
+
+      .theme-switcher-label {
+        margin: 0 6px 0 10px;
+        color: var(--text-muted);
+        font-size: 0.78rem;
+        font-weight: 800;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+      }
+
+      .theme-choice {
+        min-height: 32px;
+        padding: 0 12px;
+        border: 0;
+        border-radius: 999px;
+        background: transparent;
+        color: var(--text-secondary);
+        cursor: pointer;
+        font: inherit;
+        font-size: 0.82rem;
+        font-weight: 800;
+      }
+
+      .theme-choice[aria-pressed="true"] {
+        background: var(--theme-selected-bg);
+        color: var(--theme-selected-text);
+      }
+
+      @media (min-width: 760px) {
+        .nav-links {
+          display: flex;
         }
 
-        article {
-          padding: 1.8rem;
+        main {
+          padding-top: 92px;
+        }
+
+        .footer-inner {
+          flex-direction: row;
+          justify-content: space-between;
+          align-items: center;
+        }
+
+        .footer-links {
+          align-items: center;
+        }
+      }
+
+      @media (max-width: 520px) {
+        body {
+          padding-bottom: 112px;
+        }
+
+        .theme-switcher {
+          right: 16px;
+          left: 16px;
+          justify-content: center;
         }
       }
     </style>
   </head>
   <body>
+    <header class="site-header">
+      <nav class="nav-shell" aria-label="Primary navigation">
+        <a class="brand" href="../" aria-label="InkBit home">
+          <img
+            class="brand-mark"
+            src="../assets/branding/logo.png"
+            alt=""
+            width="1024"
+            height="1024"
+            aria-hidden="true"
+          />
+          <span>InkBit</span>
+        </a>
+        <div class="nav-links">
+          <a href="../#features">Features</a>
+          <a href="../#privacy">Privacy</a>
+          <a href="../#faq">FAQ</a>
+          <a href="../#download">Download</a>
+        </div>
+        <a class="button" href="../#download">Get InkBit</a>
+      </nav>
+    </header>
+
     <main>
+      <div class="policy-hero">
+        <p class="eyebrow">Private reflection</p>
+        <h1>InkBit Privacy Policy</h1>
+        <p class="meta"><strong>Last updated:</strong> June 8, 2026</p>
+      </div>
+
       <article>
         <!-- Source of truth: privacy/privacy_policy.md -->
-        <p class="top-link"><a href="../">Back to InkBit</a></p>
-
-        <h1>InkBit Privacy Policy</h1>
-        <p class="meta"><strong>Last updated:</strong> February 17, 2026</p>
+        <p class="source-note"><a href="../">Back to InkBit</a></p>
 
         <p>
-          InkBit works without accounts. You can use the app without sharing your name, email, or phone number.
-          Journal entries and reflections stay on your device unless you choose to share them.
+          InkBit works without online accounts. You can use the app without sharing your name,
+          email, or phone number. Journal entries and reflections stay on your device unless you
+          choose to share them.
         </p>
 
         <h2>1. Local Data (On Your Device)</h2>
         <ul>
           <li>
-            Your journal entries, favorites, reflections, and app preferences (for example theme, reminders, and
-            app-lock setting) are stored locally on your device.
+            Your journal entries, favorites, reflections, and app preferences (for example theme,
+            reminders, and app-lock setting) are stored locally on your device.
           </li>
           <li>This local content is not uploaded to our servers by default.</li>
         </ul>
@@ -118,48 +445,49 @@
         <h2>2. Analytics and Crash Reports</h2>
         <ul>
           <li>
-            We use Firebase Analytics to understand feature usage, such as screen opens, interactions, and
-            navigation patterns.
+            We use Firebase Analytics to understand basic app usage and improve InkBit. Analytics
+            does not include your journal entries or reflections.
           </li>
           <li>
-            We use Firebase Crashlytics to collect crash and diagnostic data, such as app version, device details,
-            stack traces, and breadcrumbs, so we can fix issues.
+            We use Firebase Crashlytics to collect crash and diagnostic data, such as app version,
+            device details, stack traces, and breadcrumbs, so we can fix issues.
           </li>
         </ul>
 
         <h2>3. Notifications</h2>
         <ul>
           <li>
-            If you enable push notifications, Firebase Cloud Messaging may process a device token and topic
-            subscription to deliver messages to your device.
+            If you enable push notifications, Firebase Cloud Messaging may process a device token
+            and topic subscription to deliver messages to your device.
           </li>
           <li>
-            Daily reading reminders and daily journal reminders are scheduled locally on your device, based on your
-            notification settings.
+            Daily reading reminders and daily journal reminders are scheduled locally on your
+            device, based on your notification settings.
           </li>
         </ul>
 
         <h2>4. Security and App Lock</h2>
         <ul>
           <li>
-            If you enable app lock, biometric or device credential checks are handled by your operating system.
-            InkBit receives only the authentication result (success or failure).
+            If you enable app lock, biometric or device credential checks are handled by your
+            operating system. InkBit receives only the authentication result (success or failure).
           </li>
           <li>
-            When app lock is enabled, Android recent-app snapshots are protected to reduce content exposure.
+            When app lock is enabled, Android recent-app snapshots are protected to reduce content
+            exposure.
           </li>
         </ul>
 
         <h2>5. Content Updates</h2>
         <ul>
           <li>
-            When a notification payload includes a secure update URL, the app may download updated reading content
-            (JSON).
+            When a notification payload includes a secure update URL, the app may download updated
+            reading content (JSON).
           </li>
           <li>
-            When your device makes content or update requests, delivery providers (including hosting/CDN services and
-            Google Play) may receive standard connection or update metadata, such as IP address, app version, and
-            install status.
+            When your device makes content or update requests, delivery providers (including
+            hosting/CDN services and Google Play) may receive standard connection or update
+            metadata, such as IP address, app version, and install status.
           </li>
         </ul>
 
@@ -167,8 +495,9 @@
         <ul>
           <li>We do not sell your personal data.</li>
           <li>
-            We share data only with service providers required to operate the app, including Firebase/Google, Google
-            Play, and content hosting. If you use share, content is sent only to the app you select.
+            We share data only with service providers required to operate the app, including
+            Firebase/Google, Google Play, and content hosting. If you use share, content is sent
+            only to the app you select.
           </li>
         </ul>
 
@@ -180,8 +509,92 @@
         </ul>
 
         <h2>8. Contact</h2>
-        <p>Email: <a href="mailto:inkbit.info@gmail.com">inkbit.info@gmail.com</a></p>
+        <ul>
+          <li>Email: <a href="mailto:inkbit.info@gmail.com">inkbit.info@gmail.com</a></li>
+        </ul>
       </article>
     </main>
+
+    <footer class="footer">
+      <div class="footer-inner">
+        <div>&copy; 2026 InkBit. All rights reserved.</div>
+        <div class="footer-links">
+          <a href="../">Home</a>
+          <a href="mailto:inkbit.info@gmail.com">inkbit.info@gmail.com</a>
+          <a href="../#download">Download</a>
+        </div>
+        <div class="theme-switcher" aria-label="Theme preference">
+          <span class="theme-switcher-label">Theme</span>
+          <button class="theme-choice" type="button" data-theme-choice="system">System</button>
+          <button class="theme-choice" type="button" data-theme-choice="light">Light</button>
+          <button class="theme-choice" type="button" data-theme-choice="dark">Dark</button>
+        </div>
+      </div>
+    </footer>
+    <script>
+      (() => {
+        const storageKey = "inkbit-theme";
+        const darkQuery = matchMedia("(prefers-color-scheme: dark)");
+        const buttons = [...document.querySelectorAll("[data-theme-choice]")];
+        const themeMetaTags = [...document.querySelectorAll('meta[name="theme-color"]')];
+
+        const getSavedChoice = () => {
+          try {
+            const savedTheme = localStorage.getItem(storageKey);
+            return savedTheme === "light" || savedTheme === "dark" ? savedTheme : "system";
+          } catch (error) {
+            return "system";
+          }
+        };
+
+        const getEffectiveTheme = (choice) => {
+          if (choice === "light" || choice === "dark") {
+            return choice;
+          }
+          return darkQuery.matches ? "dark" : "light";
+        };
+
+        const applyTheme = (choice) => {
+          if (choice === "light" || choice === "dark") {
+            document.documentElement.dataset.theme = choice;
+          } else {
+            document.documentElement.removeAttribute("data-theme");
+          }
+
+          buttons.forEach((button) => {
+            button.setAttribute("aria-pressed", String(button.dataset.themeChoice === choice));
+          });
+
+          const effectiveTheme = getEffectiveTheme(choice);
+          themeMetaTags.forEach((tag) => {
+            tag.content = effectiveTheme === "dark" ? "#17151C" : "#F6EDE9";
+          });
+        };
+
+        buttons.forEach((button) => {
+          button.addEventListener("click", () => {
+            const choice = button.dataset.themeChoice;
+            try {
+              if (choice === "system") {
+                localStorage.removeItem(storageKey);
+              } else {
+                localStorage.setItem(storageKey, choice);
+              }
+            } catch (error) {
+              // Theme changes still apply for this page view if storage is unavailable.
+            }
+            applyTheme(choice);
+          });
+        });
+
+        darkQuery.addEventListener("change", () => {
+          if (getSavedChoice() === "system") {
+            applyTheme("system");
+          }
+        });
+
+        applyTheme(getSavedChoice());
+      })();
+    </script>
   </body>
 </html>
