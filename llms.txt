@@ -1,6 +1,6 @@
 # InkBit
 
-> InkBit is a calm, private reading journal Android app for saving meaningful quotes, excerpts, poems, and small reflections in one quiet literary space.
+> InkBit is a calm, private reading journal app for iPhone and Android, built for saving meaningful quotes, excerpts, poems, and small reflections in one quiet literary space.
 
 InkBit is designed for readers who want a personal literary journal without social feeds, streak pressure, or public performance. Journal entries, favorites, and reflections stay on your device by default.
 
@@ -12,9 +12,10 @@ InkBit is designed for readers who want a personal literary journal without soci
 
 ## Download
 
-- Google Play (Android): https://play.google.com/store/apps/details?id=com.trigri.inkbit
+- App Store (iPhone): https://apps.apple.com/app/apple-store/id6759322821?pt=128566029&ct=websitelink&mt=8
+- Apple App Store ID: 6759322821
+- Google Play (Android): https://play.google.com/store/apps/details?id=com.trigri.inkbit&referrer=utm_source%3Dwebsite%26utm_medium%3Dweb%26utm_campaign%3Dwebsite_download
 - Package ID: com.trigri.inkbit
-- iPhone: not available yet
 
 ## What InkBit is
 
@@ -58,8 +59,8 @@ No. InkBit is a quiet space for one thought at a time, without social feeds or s
 ### Who is InkBit for?
 Readers, journal keepers, students, writers, and anyone who wants a calm private thought journal for words worth returning to.
 
-### Is InkBit available on Android?
-Yes. InkBit is available on Google Play for Android.
+### Is InkBit available on iPhone and Android?
+Yes. InkBit is available on the App Store for iPhone and on Google Play for Android.
 
 ## Contact
 

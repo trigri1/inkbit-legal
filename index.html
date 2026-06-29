@@ -15,6 +15,10 @@
     <meta name="author" content="InkBit" />
     <meta name="application-name" content="InkBit" />
     <meta name="apple-mobile-web-app-title" content="InkBit" />
+    <meta
+      name="apple-itunes-app"
+      content="app-id=6759322821, app-argument=https://apps.apple.com/app/apple-store/id6759322821?pt=128566029&ct=websitelink&mt=8"
+    />
     <meta name="language" content="English" />
     <meta name="format-detection" content="telephone=no" />
     <meta
@@ -101,7 +105,8 @@
             "logo": "https://trigri1.github.io/inkbit-legal/assets/branding/logo.png",
             "email": "inkbit.info@gmail.com",
             "sameAs": [
-              "https://play.google.com/store/apps/details?id=com.trigri.inkbit"
+              "https://apps.apple.com/app/apple-store/id6759322821?pt=128566029&ct=websitelink&mt=8",
+              "https://play.google.com/store/apps/details?id=com.trigri.inkbit&referrer=utm_source%3Dwebsite%26utm_medium%3Dweb%26utm_campaign%3Dwebsite_download"
             ]
           },
           {
@@ -110,10 +115,16 @@
             "name": "InkBit",
             "applicationCategory": "LifestyleApplication",
             "applicationSubCategory": "Reading journal",
-            "operatingSystem": "Android",
+            "operatingSystem": "Android, iOS",
             "url": "https://trigri1.github.io/inkbit-legal/",
-            "downloadUrl": "https://play.google.com/store/apps/details?id=com.trigri.inkbit",
-            "installUrl": "https://play.google.com/store/apps/details?id=com.trigri.inkbit",
+            "downloadUrl": [
+              "https://apps.apple.com/app/apple-store/id6759322821?pt=128566029&ct=websitelink&mt=8",
+              "https://play.google.com/store/apps/details?id=com.trigri.inkbit&referrer=utm_source%3Dwebsite%26utm_medium%3Dweb%26utm_campaign%3Dwebsite_download"
+            ],
+            "installUrl": [
+              "https://apps.apple.com/app/apple-store/id6759322821?pt=128566029&ct=websitelink&mt=8",
+              "https://play.google.com/store/apps/details?id=com.trigri.inkbit&referrer=utm_source%3Dwebsite%26utm_medium%3Dweb%26utm_campaign%3Dwebsite_download"
+            ],
             "image": "https://trigri1.github.io/inkbit-legal/assets/branding/inkbit-og.png",
             "screenshot": "https://trigri1.github.io/inkbit-legal/assets/screens/light/reader.png",
             "description": "InkBit is a calm, private reading reflection app for saving excerpts, quotes, poems, and personal thoughts.",
@@ -200,10 +211,10 @@
               },
               {
                 "@type": "Question",
-                "name": "Is InkBit available on Android?",
+                "name": "Is InkBit available on iPhone and Android?",
                 "acceptedAnswer": {
                   "@type": "Answer",
-                  "text": "Yes. InkBit is available on Google Play for Android devices."
+                  "text": "Yes. InkBit is available on the App Store for iPhone and on Google Play for Android devices."
                 }
               }
             ]
@@ -454,6 +465,7 @@
         display: inline-flex;
         align-items: center;
         justify-content: center;
+        gap: 10px;
         min-height: 46px;
         padding: 0 20px;
         border: 1px solid transparent;
@@ -482,12 +494,51 @@
         color: var(--button-secondary-text);
       }
 
-      .button-quiet {
-        min-height: 40px;
-        padding-inline: 16px;
+      .store-icon {
+        display: inline-flex;
+        width: 20px;
+        height: 20px;
+        flex: 0 0 auto;
+        align-items: center;
+        justify-content: center;
+        color: currentColor;
+      }
+
+      .store-icon svg {
+        display: block;
+        width: 100%;
+        height: 100%;
+        fill: currentColor;
+      }
+
+      .store-button {
+        padding-inline: 18px 22px;
+      }
+
+      .nav-store-actions {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        flex: 0 0 auto;
+      }
+
+      .store-icon-button {
+        width: 44px;
+        min-height: 44px;
+        padding: 0;
         border-color: var(--border);
-        background: transparent;
+        background: color-mix(in srgb, var(--surface), transparent 18%);
         color: var(--text-secondary);
+      }
+
+      .store-icon-button:hover {
+        border-color: var(--accent-muted);
+        color: var(--text);
+      }
+
+      .store-icon-button .store-icon {
+        width: 19px;
+        height: 19px;
       }
 
       .hero {
@@ -857,6 +908,18 @@
         text-align: center;
       }
 
+      .download-panel {
+        width: min(100%, 820px);
+        margin: 0 auto;
+        padding: clamp(30px, 7vw, 58px);
+        border: 1px solid var(--border-soft);
+        border-radius: 34px;
+        background:
+          radial-gradient(circle at 12% 0%, color-mix(in srgb, var(--accent-soft), transparent 32%), transparent 20rem),
+          color-mix(in srgb, var(--surface), transparent 8%);
+        box-shadow: var(--shadow-soft);
+      }
+
       .final-cta .serif {
         width: min(100%, 720px);
         margin: 0 auto;
@@ -868,6 +931,18 @@
         width: min(100%, 560px);
         margin: 22px auto 0;
         color: var(--text-secondary);
+      }
+
+      .download-actions {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 12px;
+        margin-top: 30px;
+      }
+
+      .download-actions .store-button {
+        min-width: 236px;
       }
 
       .footer {
@@ -1022,10 +1097,31 @@
 
         .nav-shell {
           min-height: 64px;
+          gap: 10px;
         }
 
-        .button-quiet {
-          display: none;
+        .nav-store-actions {
+          gap: 6px;
+        }
+
+        .store-icon-button {
+          width: 40px;
+          min-height: 40px;
+        }
+
+        .store-button {
+          width: 100%;
+          max-width: 340px;
+        }
+
+        .hero-actions,
+        .download-actions {
+          justify-content: stretch;
+        }
+
+        .hero-actions .button,
+        .download-actions .button {
+          width: 100%;
         }
 
         .hero {
@@ -1099,13 +1195,36 @@
           <a href="#faq">FAQ</a>
           <a href="#download">Download</a>
         </div>
-        <a
-          class="button button-quiet"
-          href="https://play.google.com/store/apps/details?id=com.trigri.inkbit"
-          target="_blank"
-          rel="noopener noreferrer"
-          >Get InkBit</a
-        >
+        <div class="nav-store-actions" aria-label="Download InkBit">
+          <a
+            class="button store-icon-button"
+            href="https://apps.apple.com/app/apple-store/id6759322821?pt=128566029&ct=websitelink&mt=8"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Download InkBit on the App Store"
+            title="Download on the App Store"
+          >
+            <span class="store-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" focusable="false">
+                <path d="M17.05 20.28c-.98.95-2.05.8-3.08.35-1.09-.46-2.09-.48-3.24 0-1.44.62-2.2.44-3.06-.35C2.79 15.25 3.51 7.59 9.05 7.31c1.35.07 2.29.74 3.08.8 1.18-.24 2.31-.93 3.57-.84 1.51.12 2.65.72 3.4 1.8-3.12 1.87-2.38 5.98.48 7.13-.57 1.5-1.31 2.99-2.53 4.08ZM12.03 7.25C11.88 5.02 13.69 3.18 15.77 3c.29 2.58-2.34 4.5-3.74 4.25Z" />
+              </svg>
+            </span>
+          </a>
+          <a
+            class="button store-icon-button"
+            href="https://play.google.com/store/apps/details?id=com.trigri.inkbit&referrer=utm_source%3Dwebsite%26utm_medium%3Dweb%26utm_campaign%3Dwebsite_download"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Get InkBit on Google Play"
+            title="Get it on Google Play"
+          >
+            <span class="store-icon" aria-hidden="true">
+              <svg viewBox="0 0 512 512" focusable="false">
+                <path d="M325.3 234.3 104.6 13l280.8 161.2-60.1 60.1ZM47 0C34 6.8 25.3 19.2 25.3 35.3v441.4c0 16.1 8.7 28.5 21.7 35.3l256.6-256L47 0Zm425.2 225.6-58.9-34.1-65.7 64.5 65.7 64.5 60.1-34.1c18-14.3 18-46.5-1.2-60.8ZM104.6 499l280.8-161.2-60.1-60.1L104.6 499Z" />
+              </svg>
+            </span>
+          </a>
+        </div>
       </nav>
     </header>
 
@@ -1122,11 +1241,30 @@
             </p>
             <div class="hero-actions">
               <a
-                class="button button-primary"
-                href="https://play.google.com/store/apps/details?id=com.trigri.inkbit"
+                class="button button-primary store-button"
+                href="https://apps.apple.com/app/apple-store/id6759322821?pt=128566029&ct=websitelink&mt=8"
                 target="_blank"
                 rel="noopener noreferrer"
-                >Get InkBit</a
+              >
+                <span class="store-icon" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" focusable="false">
+                    <path d="M17.05 20.28c-.98.95-2.05.8-3.08.35-1.09-.46-2.09-.48-3.24 0-1.44.62-2.2.44-3.06-.35C2.79 15.25 3.51 7.59 9.05 7.31c1.35.07 2.29.74 3.08.8 1.18-.24 2.31-.93 3.57-.84 1.51.12 2.65.72 3.4 1.8-3.12 1.87-2.38 5.98.48 7.13-.57 1.5-1.31 2.99-2.53 4.08ZM12.03 7.25C11.88 5.02 13.69 3.18 15.77 3c.29 2.58-2.34 4.5-3.74 4.25Z" />
+                  </svg>
+                </span>
+                Download on the App Store</a
+              >
+              <a
+                class="button button-secondary store-button"
+                href="https://play.google.com/store/apps/details?id=com.trigri.inkbit&referrer=utm_source%3Dwebsite%26utm_medium%3Dweb%26utm_campaign%3Dwebsite_download"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <span class="store-icon" aria-hidden="true">
+                  <svg viewBox="0 0 512 512" focusable="false">
+                    <path d="M325.3 234.3 104.6 13l280.8 161.2-60.1 60.1ZM47 0C34 6.8 25.3 19.2 25.3 35.3v441.4c0 16.1 8.7 28.5 21.7 35.3l256.6-256L47 0Zm425.2 225.6-58.9-34.1-65.7 64.5 65.7 64.5 60.1-34.1c18-14.3 18-46.5-1.2-60.8ZM104.6 499l280.8-161.2-60.1-60.1L104.6 499Z" />
+                  </svg>
+                </span>
+                Get it on Google Play</a
               >
               <a class="button button-secondary" href="#experience">See how it works</a>
             </div>
@@ -1473,28 +1611,50 @@
               </p>
             </details>
             <details>
-              <summary>Is InkBit available on Android?</summary>
-              <p>Yes. InkBit is available on Google Play for Android devices.</p>
+              <summary>Is InkBit available on iPhone and Android?</summary>
+              <p>
+                Yes. InkBit is available on the App Store for iPhone and on Google Play for
+                Android devices.
+              </p>
             </details>
           </div>
         </div>
       </section>
 
       <section class="final-cta" id="download" aria-labelledby="download-title">
-        <div class="section-inner">
+        <div class="section-inner download-panel">
           <p class="kicker">Download</p>
           <h2 class="serif" id="download-title">Keep one thought close today.</h2>
           <p>
             Start with one passage, one note, or one line you want to remember. InkBit keeps the
             space quiet around it.
           </p>
-          <div class="hero-actions" style="justify-content: center">
+          <div class="download-actions">
             <a
-              class="button button-primary"
-              href="https://play.google.com/store/apps/details?id=com.trigri.inkbit"
+              class="button button-primary store-button"
+              href="https://apps.apple.com/app/apple-store/id6759322821?pt=128566029&ct=websitelink&mt=8"
               target="_blank"
               rel="noopener noreferrer"
-              >Get InkBit</a
+            >
+              <span class="store-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" focusable="false">
+                  <path d="M17.05 20.28c-.98.95-2.05.8-3.08.35-1.09-.46-2.09-.48-3.24 0-1.44.62-2.2.44-3.06-.35C2.79 15.25 3.51 7.59 9.05 7.31c1.35.07 2.29.74 3.08.8 1.18-.24 2.31-.93 3.57-.84 1.51.12 2.65.72 3.4 1.8-3.12 1.87-2.38 5.98.48 7.13-.57 1.5-1.31 2.99-2.53 4.08ZM12.03 7.25C11.88 5.02 13.69 3.18 15.77 3c.29 2.58-2.34 4.5-3.74 4.25Z" />
+                </svg>
+              </span>
+              Download on the App Store</a
+            >
+            <a
+              class="button button-secondary store-button"
+              href="https://play.google.com/store/apps/details?id=com.trigri.inkbit&referrer=utm_source%3Dwebsite%26utm_medium%3Dweb%26utm_campaign%3Dwebsite_download"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <span class="store-icon" aria-hidden="true">
+                <svg viewBox="0 0 512 512" focusable="false">
+                  <path d="M325.3 234.3 104.6 13l280.8 161.2-60.1 60.1ZM47 0C34 6.8 25.3 19.2 25.3 35.3v441.4c0 16.1 8.7 28.5 21.7 35.3l256.6-256L47 0Zm425.2 225.6-58.9-34.1-65.7 64.5 65.7 64.5 60.1-34.1c18-14.3 18-46.5-1.2-60.8ZM104.6 499l280.8-161.2-60.1-60.1L104.6 499Z" />
+                </svg>
+              </span>
+              Get it on Google Play</a
             >
             <a class="button button-secondary" href="privacy/">Privacy policy</a>
           </div>
@@ -1509,7 +1669,13 @@
           <a href="privacy/">Privacy</a>
           <a href="mailto:inkbit.info@gmail.com">inkbit.info@gmail.com</a>
           <a
-            href="https://play.google.com/store/apps/details?id=com.trigri.inkbit"
+            href="https://apps.apple.com/app/apple-store/id6759322821?pt=128566029&ct=websitelink&mt=8"
+            target="_blank"
+            rel="noopener noreferrer"
+            >App Store</a
+          >
+          <a
+            href="https://play.google.com/store/apps/details?id=com.trigri.inkbit&referrer=utm_source%3Dwebsite%26utm_medium%3Dweb%26utm_campaign%3Dwebsite_download"
             target="_blank"
             rel="noopener noreferrer"
             >Google Play</a
